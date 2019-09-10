@@ -2,7 +2,7 @@
 
 ;; Author: shanyouli
 ;; Maintainer: shanyouli
-;; Version: v0.1
+;; Version: v0.2
 ;; Package-Requires: (snails)
 ;; Homepage: https://github.com/shanyou/snails-backend
 ;; Keywords: load themes
@@ -47,6 +47,12 @@
 ;; (push 'snails-backend-themes snails-default-backends)
 ;; M-x snails-load-themes
 
+;;; changlog:
+
+;;
+;; remove snails-load-theme,
+;; time: 2019.09.10 18:34
+
 ;;; package Requires
 (require 'snails-core)
 
@@ -71,11 +77,6 @@
   (lambda (candidate)
     (disable-theme custom-enabled-themes)
     (load-theme (intern candidate) t)))
-
-(defun snails-load-themes ()
-  "Loading a theme use `snails'"
-  (interactive)
-  (snails '(snails-backend-themes)))
 
 (provide 'snails-backend-themes)
 
