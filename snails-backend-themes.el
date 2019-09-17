@@ -75,7 +75,7 @@
 
   :candiate-do
   (lambda (candidate)
-    (disable-theme custom-enabled-themes)
+    (disable-theme (car custom-enabled-themes))
     (load-theme (intern candidate) t)))
 
 (provide 'snails-backend-themes)
